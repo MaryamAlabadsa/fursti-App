@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/settingsRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Setting"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#2DB6A3" />
+
+        <ImageView
+            android:id="@+id/imgNotification"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="290dp"
+            android:src="@drawable/ic_notification"
+            android:contentDescription="Notifications"
+            app:tint="#A0B6B4" />
+    </LinearLayout>
+
+    <!-- Settings List -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/settingsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Setting item -->
+            <include layout="@layout/item_setting_option"
+                android:id="@+id/itemJobPreference" />
+            <include layout="@layout/item_setting_option"
+                android:id="@+id/itemFaqs" />
+            <include layout="@layout/item_setting_option"
+                android:id="@+id/itemHelpFeedback" />
+            <include layout="@layout/item_setting_option"
+                android:id="@+id/itemPrivacyPolicy" />
+            <include layout="@layout/item_setting_option"
+                android:id="@+id/itemLanguagePreference" />
+            <include layout="@layout/item_setting_option"
+                android:id="@+id/itemNotificationSetting" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

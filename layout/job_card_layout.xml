@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/bg_card"
+    android:elevation="4dp"
+    android:padding="12dp">
+
+    <!-- Time -->
+    <LinearLayout
+        android:id="@+id/li1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_worldwide"
+            app:layout_constraintEnd_toStartOf="@id/iv_bookmark"
+            app:layout_constraintTop_toTopOf="@id/iv_logo"
+            app:tint="@color/app_color" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="6dp"
+            android:text="30 min"
+            android:textColor="#2C3E50"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <!-- Badge icons -->
+    <ImageView
+        android:id="@+id/iv_badge1"
+        android:layout_width="18dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/ic_badge_purple"
+        app:layout_constraintEnd_toStartOf="@+id/iv_badge2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_badge2"
+        android:layout_width="18dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/ic_badge_yellow"
+        app:layout_constraintEnd_toStartOf="@+id/iv_badge3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_badge3"
+        android:layout_width="18dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_badge_cyan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Web and Mobile Development"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/li1" />
+
+    <!-- Company logo -->
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <!-- Company name -->
+    <TextView
+        android:id="@+id/tv_company"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="PURE for IT Solutions"
+        android:textColor="#333"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/iv_share"
+        app:layout_constraintStart_toEndOf="@id/iv_logo"
+        app:layout_constraintTop_toTopOf="@id/iv_logo" />
+
+    <!-- ID and Views -->
+    <TextView
+        android:id="@+id/tv_views"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(1012416)   👁️ 21 K"
+        android:textColor="#777"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/tv_company"
+        app:layout_constraintTop_toBottomOf="@id/tv_company" />
+
+    <!-- Share Icon -->
+    <ImageView
+        android:id="@+id/iv_share"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_share"
+        app:layout_constraintEnd_toStartOf="@id/iv_bookmark"
+        app:layout_constraintTop_toTopOf="@id/iv_logo" />
+
+    <!-- Bookmark Icon -->
+    <ImageView
+        android:id="@+id/iv_bookmark"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_bookmark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_logo"
+        app:tint="@color/black" />
+
+    <!-- Tags Row -->
+    <LinearLayout
+        android:id="@+id/ll_tags"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_logo">
+
+        <TextView
+            android:id="@+id/tv_tag1"
+            style="@style/TagStyle"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_1"
+            android:text="Engineering" />
+
+        <TextView
+            android:id="@+id/tv_tag2"
+            style="@style/TagStyle"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_2"
+            android:text="100$ - 250$" />
+    </LinearLayout>
+
+    <!-- Footer Row -->
+    <LinearLayout
+        android:id="@+id/ll_footer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_tags">
+
+        <TextView
+            android:id="@+id/tv_footer1"
+            style="@style/TagStyle"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_crown"
+            android:drawablePadding="6dp"
+            android:text="3 Years" />
+
+        <TextView
+            android:id="@+id/tv_footer2"
+            style="@style/TagStyle"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_clock"
+            android:drawablePadding="6dp"
+            android:text="3 days rem." />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
